@@ -4,7 +4,7 @@ import Main from './layout/Main';
 import Signin from './components/Signin';
 import Signup from './components/Signup';
 import Courses from './components/Courses/Courses';
-import Books from './components/Courses/Books';
+import Info from './components/Courses/Info';
 
 function App() {
   const router = createBrowserRouter([
@@ -24,6 +24,11 @@ function App() {
           path: '/books/:id',
           element: <Courses></Courses>,
           loader: ({ params }) => fetch(`http://localhost:5000/books/${params.id}`)
+        },
+        {
+          path: '/books/boi/:id',
+          element: <Info></Info>,
+          loader: ({ params }) => fetch(`http://localhost:5000/books/boi/${params.id}`)
         }
         // {
         //   path: '/books/:id',

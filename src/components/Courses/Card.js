@@ -1,9 +1,10 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 // import { useLoaderData } from 'react-router-dom';
 
 const Card = ({boi}) => {
     // const books = useLoaderData();
-    const { b_name, description, img } = boi;
+    const { id, b_name, description, img } = boi;
 
     return (
         <div className="col-span-1">
@@ -15,7 +16,7 @@ const Card = ({boi}) => {
                     <h2 className="card-title">{b_name}</h2>
                     <p>{description}</p>
                     <div className="card-actions">
-                        <button className="btn btn-primary">Details</button>
+                        <button className="btn btn-primary"><Link to={`/books/boi/${id}`}>Details</Link> </button>
                     </div>
                 </div>
             </div>
