@@ -8,14 +8,15 @@ import Info from './components/Courses/Info';
 import PrivateRout from './PrivateRoter/PrivateRout';
 import CheckOut from './components/CheckOut';
 import React, {createContext, useState} from 'react';
+import ReactSwitch from 'react-switch';
 export const ThemeContext = createContext(null);
 
 
 
 function App() {
-  const [the, setThe] = useState("dark");
-  const toogleThe =()=>{
-    setThe(curr => (curr === "dark" ? "light" : "dark") )
+  const [theme, setTheme] = useState("dark");
+  const toogleTheme =()=>{
+    setTheme(curr => (curr === "dark" ? "light" : "dark") )
   }
 
 
@@ -63,11 +64,11 @@ function App() {
 
 
   return (
-    <ThemeContext.Provider value={{the, setThe}}>
-    <div className="App" id={the}>
+    <ThemeContext.Provider value={{theme, setTheme}}>
+    <div className="App" id={theme}>
+      <ReactSwitch onChange={toogleTheme} checked={theme === "dark"}></ReactSwitch>
+      {/* <button className="btn btn-primary my-3" onChange={toogleTheme} checked={theme === "dark"}>change</button> */}
       <RouterProvider router={router}></RouterProvider>
-
-
     </div></ThemeContext.Provider>
   );
 }
