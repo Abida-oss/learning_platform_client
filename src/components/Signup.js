@@ -7,7 +7,7 @@ import { AuthContext } from '../contex/AuthProvider/AuthProvider';
 const Signup = () => {
 
     const  {createUser}=useContext(AuthContext);
-    const [setPasswordError]=useState('');
+    const [passwordError, setPasswordError]=useState([]);
     const [succes, setSuccess]=useState(false);
     const handleSubmit=event=>{
         event.preventDefault();

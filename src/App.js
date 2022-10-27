@@ -7,8 +7,18 @@ import Courses from './components/Courses/Courses';
 import Info from './components/Courses/Info';
 import PrivateRout from './PrivateRoter/PrivateRout';
 import CheckOut from './components/CheckOut';
+import React, {createContext, useState} from 'react';
+export const ThemeContext = createContext(null);
+
+
 
 function App() {
+  const [the, setThe] = useState("dark");
+  const toogleThe =()=>{
+    setThe(curr => (curr === "dark" ? "light" : "dark") )
+  }
+
+
   const router = createBrowserRouter([
     {
       path: '/',
@@ -53,11 +63,12 @@ function App() {
 
 
   return (
-    <div className="App">
+    <ThemeContext.Provider value={{the, setThe}}>
+    <div className="App" id={the}>
       <RouterProvider router={router}></RouterProvider>
 
 
-    </div>
+    </div></ThemeContext.Provider>
   );
 }
 

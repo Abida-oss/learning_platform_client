@@ -12,7 +12,7 @@ const Signin = () => {
     //Private Routing for check out
     const navigate= useNavigate();
     const location=useLocation();
-    const from=location.state?.from.pathname|| '/category'
+    const from=location.state?.from.pathname|| '/books'
   
 
     //email,pass
@@ -83,7 +83,7 @@ const Signin = () => {
                             </label>
                         </div>
                         <div className="form-control mt-6">
-                            <button className="btn btn-primary my-3" ><Link>Login</Link></button>
+                            <button className="btn btn-primary my-3" ><Link to='/book'>Login</Link></button>
                             <button onClick={handleGoogleSignIn} className="btn btn-primary my-3">Login with google</button>
                             {/* <button  onClick={handleGithubSignIn} className="btn btn-primary">Login with github</button> */}
                         </div>
