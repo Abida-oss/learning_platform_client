@@ -10,6 +10,7 @@ import CheckOut from './components/CheckOut';
 
 import React, {createContext, useState} from 'react';
 import ReactSwitch from 'react-switch';
+import Blog from './components/Blog';
 export const ThemeContext = createContext(null);
 
 
@@ -33,6 +34,10 @@ function App() {
         {
           path: '/Signup',
           element: <Signup></Signup>
+        },
+        {
+          path: '/Blog',
+          element: <Blog></Blog>
         },
         {
           path: '/books',

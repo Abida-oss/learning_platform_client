@@ -28,6 +28,7 @@ const Header = () => {
                                 <span> {user?.displayName}</span>
                                 <Link onClick={handleLogOut} className="btn btn-ghost normal-case text-xl">LogOut</Link>
                                 <Link to='/books' className="btn btn-ghost normal-case text-xl">Courses</Link>
+                                <Link to='/Blog' className="btn btn-ghost normal-case text-xl">FAQ</Link>
 
                             </>
                             :
@@ -36,13 +37,14 @@ const Header = () => {
                                 <Link to='/Signin' className="btn btn-ghost normal-case text-xl">SignIn</Link>
                                 <Link to='/Signup' className="btn btn-ghost normal-case text-xl">SignUp</Link>
                                 <Link to='/books' className="btn btn-ghost normal-case text-xl">Courses</Link>
+                                <Link to='/Blog' className="btn btn-ghost normal-case text-xl">FAQ</Link>
 
                             </>
                     }
                 </Link>
 
 
-                <Link to='' className="btn btn-ghost normal-case text-xl">{user?.photoURL ? <img className="w-10 rounded-full" src={user?.photoURL} /> : ''}</Link>
+                <Link to='' className="btn btn-ghost normal-case text-xl">{user?.photoURL ? <img alt='' className="w-10 rounded-full" src={user?.photoURL} /> : ''}</Link>
 
 
             </div>
