@@ -56,14 +56,14 @@ function App() {
         },
         {
           path:'/checkout/:id',
-
           element:<PrivateRout><CheckOut></CheckOut></PrivateRout>,
-          loader: ({ params }) => fetch(`http://localhost:5000/books/boi/${params.id}`)
-
-        
-        },
-       
+          loader: ({ params }) => fetch(`http://localhost:5000/books/boi/${params.id}`)        
+        },       
       ]
+    },
+    {
+      path: '*',
+      element: <div> <h1>Page is not found</h1></div>
     }
 
   ])
