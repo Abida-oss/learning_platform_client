@@ -86,6 +86,7 @@ const Signup = () => {
                                     <input type="text" name="confirmpassword" placeholder="confirm password" className="input input-bordered" required />
                                     <label className="label">
                                         <Link  className="label-text-alt link link-hover">Forgot password?</Link>
+                                        <Link to='/Signin'  className="label-text-alt link link-hover">Already have an account? </Link>
                                     </label>
                                 </div>
                                 <p>{passwordError}</p>

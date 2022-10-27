@@ -94,6 +94,8 @@ const Signin = () => {
                             <input type="password" name="password" placeholder="password" className="input input-bordered" required />
                             <label className="label">
                                 <Link className="label-text-alt link link-hover">Forgot password?</Link>
+                                <Link to='/Signup'  className="label-text-alt link link-hover">Create an account? </Link>
+
                             </label>
                         </div>
                         <div className="form-control mt-6">
