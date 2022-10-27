@@ -7,6 +7,7 @@ import Courses from './components/Courses/Courses';
 import Info from './components/Courses/Info';
 import PrivateRout from './PrivateRoter/PrivateRout';
 import CheckOut from './components/CheckOut';
+
 import React, {createContext, useState} from 'react';
 import ReactSwitch from 'react-switch';
 export const ThemeContext = createContext(null);

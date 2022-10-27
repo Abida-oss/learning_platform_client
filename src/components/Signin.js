@@ -1,7 +1,7 @@
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import React, { useContext } from 'react';
 import { AuthContext } from '../contex/AuthProvider/AuthProvider';
-import { GoogleAuthProvider } from 'firebase/auth';
+import { GithubAuthProvider, GoogleAuthProvider } from 'firebase/auth';
 
 
 const Signin = () => {
@@ -29,7 +29,6 @@ const Signin = () => {
                 const user = res.user;
                 console.log(user);
                 form.reset();
-
                 navigate(from,{replace:true}) //private route
             })
             .catch(e => console.error(e));
@@ -38,19 +37,34 @@ const Signin = () => {
     const { providerLogin } = useContext(AuthContext);
 
     const googleProvider = new GoogleAuthProvider();
-    // const githubProvider=new GithubAuthProvider();
+    const githubProvider=new GithubAuthProvider();
 
+
+
+    
+    const handleGithubSignIn=()=>{
+        providerLogin( githubProvider)
+        .then((res) => {
+          
+            const user = res.user;
+            console.log(user);
+            
+          })
+
+          .catch(error=>console.error(error));
+
+    }
 
 
     const handleGoogleSignIn = () => {
         providerLogin(googleProvider)
             .then((res) => {
-                // Signed in 
+                
                 const user = res.user;
                 console.log(user);
 
-                navigate(from,{replace:true}) //private router
-                // ...
+                navigate(from,{replace:true}) 
+                
             })
 
             .catch(error => console.error(error));
@@ -85,7 +99,7 @@ const Signin = () => {
                         <div className="form-control mt-6">
                             <button className="btn btn-primary my-3" ><Link to='/book'>Login</Link></button>
                             <button onClick={handleGoogleSignIn} className="btn btn-primary my-3">Login with google</button>
-                            {/* <button  onClick={handleGithubSignIn} className="btn btn-primary">Login with github</button> */}
+                            <button  onClick={handleGithubSignIn} className="btn btn-primary">Login with github</button>
                         </div>
                     </div>
                 </form >

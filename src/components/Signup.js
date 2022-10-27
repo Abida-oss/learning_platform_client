@@ -88,8 +88,8 @@ const Signup = () => {
                                         <Link  className="label-text-alt link link-hover">Forgot password?</Link>
                                     </label>
                                 </div>
-                                {/* <p>{passwordError}</p>
-                                {succes && <p>User Created successfully</p>} */}
+                                <p>{passwordError}</p>
+                                {succes && <p>User Created successfully</p>}
 
                                 <div className="form-control mt-6">
                                     <button className="btn btn-primary">Register</button>

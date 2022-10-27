@@ -42,7 +42,7 @@ const Header = () => {
                 </Link>
 
 
-                <Link to='' className="btn btn-ghost normal-case text-xl">{user?.photoURL ? <img className="w-10 rounded-full" src={user?.photoURL} /> : 'users'}</Link>
+                <Link to='' className="btn btn-ghost normal-case text-xl">{user?.photoURL ? <img className="w-10 rounded-full" src={user?.photoURL} /> : ''}</Link>
 
 
             </div>
