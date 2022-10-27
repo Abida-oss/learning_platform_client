@@ -12,7 +12,7 @@ useEffect(() =>{
 
     return (
         <div>
-            <h1 className='text-2xl mt-6 mb-6'>All Courses: {courses.length}</h1>
+            <h1 className='text-2xl mt-2 mb-6'>All Courses: {courses.length}</h1>
             <div>
                 {
                     courses.map(course =><p className='mb-2' key={course.id}>
