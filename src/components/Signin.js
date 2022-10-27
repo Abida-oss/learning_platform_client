@@ -2,6 +2,8 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import React, { useContext } from 'react';
 import { AuthContext } from '../contex/AuthProvider/AuthProvider';
 import { GithubAuthProvider, GoogleAuthProvider } from 'firebase/auth';
+import { FaGoogle, FaGithub } from "react-icons/fa";
+
 
 
 const Signin = () => {
@@ -99,9 +101,9 @@ const Signin = () => {
                             </label>
                         </div>
                         <div className="form-control mt-6">
-                            <button className="btn btn-primary my-3" ><Link to='/book'>Login</Link></button>
-                            <button onClick={handleGoogleSignIn} className="btn btn-primary my-3">Login with google</button>
-                            <button  onClick={handleGithubSignIn} className="btn btn-primary">Login with github</button>
+                            <button className="btn btn-primary mt-3" ><Link to='/book'>Login</Link></button>
+                            <button onClick={handleGoogleSignIn} className="btn btn-primary my-3"><FaGoogle></FaGoogle>Login with google</button>
+                            <button  onClick={handleGithubSignIn} className="btn btn-primary"><FaGithub> </FaGithub> Login with github</button>
                         </div>
                     </div>
                 </form >

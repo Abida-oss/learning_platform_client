@@ -6,11 +6,11 @@ const Courses = () => {
 
     return (
         <div>
-            <div className="grid grid-cols-3 sm:grid-rows gap-4">
+            <div className="grid grid-cols-3 gap-4">
                 <div className="col-span-1">
                     <LeftNav></LeftNav>
                 </div>
-                <div className="col-span-2 columns-2 md:columns-2 sm:columns-1">
+                <div className="col-span-2 lg:columns-2 sm:columns-1 xs:columns-1">
                     <Books></Books>
                 </div>
             </div>

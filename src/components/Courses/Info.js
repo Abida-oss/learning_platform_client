@@ -1,24 +1,39 @@
 import React from 'react';
 import { Link, useLoaderData } from 'react-router-dom';
 import { FaDownload, FaEye, FaRegStar } from "react-icons/fa";
+import jsPDF from 'jspdf';
 
 const Info = () => {
     const data = useLoaderData();
     const {id} = data;
     console.log(data);
+
+    
+    const reacttopdf=()=>{
+        var doc= new jsPDF('landscape','px','a4')
+      
+    
+        doc.addPage();
+        doc.text(50,50,data.b_name)
+        doc.text(2,10,data.author) 
+        doc.text(30,20,data.description)
+
+        doc.save('a.pdf')
+
+    }
+
     return (
         <div><div>
             <div className="text-sm breadcrumbs">
                 <ul>
                     <li>
-                        <Link>
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" className="w-8 h-8 mr-2 ml-2 stroke-current"><FaDownload></FaDownload></svg>
-                            Downloads
-                        </Link>
+                        <button onClick={reacttopdf} ><Link>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" className="w-8 h-8 mr-2 ml-4 stroke-current"><FaDownload></FaDownload></svg>
+                        
+                        </Link></button>
+                        
                     </li>
                     <li>                      
-                          {/* <button className="btn btn-primary"><Link to={`/books/boi/${id}`}>Details</Link> </button> */}
-
                     <Link to={`/checkout/${id}`}>Get Premium Acces</Link>
                     </li>
                 </ul>
