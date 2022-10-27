@@ -6,7 +6,7 @@ const Blog = () => {
             <div className="card w-100 bg-base-100 shadow-xl">
                 <div className="card-body">
                     <h2 className="card-title">What is cors?</h2>
-                    <p>If a dog chews shoes whose shoes does he choose?</p><br></br>
+                    <p>Cross-origin resource sharing (CORS) is a browser security feature that restricts cross-origin HTTP requests that are initiated from scripts running in the browser. If your REST API's resources receive non-simple cross-origin HTTP requests, you need to enable CORS support.</p><br></br>
                 </div>
             </div><br></br>
             <div className="card w-100 bg-base-100 shadow-xl">
@@ -25,7 +25,7 @@ const Blog = () => {
             <div className="card w-100 bg-base-100 shadow-xl">
                 <div className="card-body">
                     <h2 className="card-title">How does the private route work?</h2>
-                    <p>If a dog chews shoes whose shoes does he choose?</p><br></br>
+                    <p></p><br></br>
                 </div>
             </div> <br></br>
             <div className="card w-100 bg-base-100 shadow-xl">
