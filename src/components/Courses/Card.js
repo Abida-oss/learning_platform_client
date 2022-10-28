@@ -15,7 +15,7 @@ const Card = ({boi}) => {
                     <p>{description}</p>
                     
                     <div className="card-actions">
-                        <button className="btn btn-primary"><Link to={`/books/boi/${id}`}>Details</Link> </button>
+                        <button className="btn li btn-primary"><Link to={`/books/boi/${id}`}>Details</Link> </button>
                     </div>
                 </div>
             </div>

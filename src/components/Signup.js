@@ -27,8 +27,6 @@ const Signup = () => {
         }
 
         setPasswordError('');
-
-
         createUser(email,password)
         .then(res=>{
             const user =res.user;
@@ -64,26 +62,26 @@ const Signup = () => {
                                     <label className="label">
                                         <span  className="label-text">Email</span>
                                     </label>
-                                    <input type="email" name="email" placeholder="email" className="input input-bordered" required/>
+                                    <input type="email" name="email" placeholder="Email" className="input input-bordered" required/>
                                 </div>
                         
                                 <div className="form-control">
                                     <label className="label">
-                                        <span  className="label-text">Password</span>
+                                        <span   className="label-text">Photo URL</span>
                                     </label>
-                                    <input  type="text" name="password" placeholder="password" className="input input-bordered" required />
+                                    <input name="photoURL" type="text" placeholder="Photo" className="input input-bordered" />
                                 </div>
                                 <div className="form-control">
                                     <label className="label">
-                                        <span   className="label-text">Photo URL</span>
+                                        <span  className="label-text">Password</span>
                                     </label>
-                                    <input name="photoURL" type="text" placeholder="email" className="input input-bordered" />
+                                    <input  type="password" name="password" placeholder="password" className="input input-bordered" required />
                                 </div>
                                 <div className="form-control">
                                     <label className="label">
                                         <span  className="label-text">Confirm Password</span>
                                     </label>
-                                    <input type="text" name="confirmpassword" placeholder="confirm password" className="input input-bordered" required />
+                                    <input type="password" name="confirmpassword" placeholder="confirm password" className="input input-bordered" required />
                                     <label className="label">
                                         <Link  className="label-text-alt link link-hover">Forgot password?</Link>
                                         <Link to='/Signin'  className="label-text-alt link link-hover">Already have an account? </Link>

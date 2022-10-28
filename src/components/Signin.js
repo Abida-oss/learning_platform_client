@@ -31,7 +31,7 @@ const Signin = () => {
                 const user = res.user;
                 console.log(user);
                 form.reset();
-                navigate(from,{replace:true}) //private route
+                navigate(from,{replace:true}) 
             })
             .catch(e => console.error(e));
     }
@@ -69,7 +69,7 @@ const Signin = () => {
                 
             })
 
-            .catch(error => console.error(error));
+            .catch((error) =>{alert(`$error.message`)});
 
     }
 

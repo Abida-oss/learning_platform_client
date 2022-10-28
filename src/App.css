@@ -2,10 +2,36 @@
   text-align: center;
 }
 
-#light{
-  background-color: rgb(55, 55, 121);
+.light{
+  background-color: rgb(181, 181, 207);
 }
-#dark{
+.light .navbar{
+  background-color: rgb(154, 154, 234);
+}
+.light p{
+  color: black;
+}
+.light .li{
+  color: black;
+}
+.light h1{
+  color: black;
+}
+.light h2{
+  color: black;
+}
+.light .card{
+  background-color: rgb(154, 154, 234);
+}
+.light .btn{
+  background-color: rgb(154, 154, 234);
+}
+.light .home{
+  color: rgb(161, 161, 197);
+}
+
+
+.dark{
   background-color: #282c34;
 }
 
