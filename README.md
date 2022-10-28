@@ -20,13 +20,11 @@ Coursera
 ## User can logout.
 ## All course will show
 ## Course details will show
-
-
-
+## User can download and can checkout
 
 
 ### Deployment
 
 GithubClient: https://github.com/programming-hero-web-course1/b610-learning-platform-client-side-Abida-oss
 GithubServer: https://github.com/programming-hero-web-course1/b610-lerning-platform-server-side-Abida-oss
-Firebase_Deploy:
+Firebase_Deploy: https://assingnment-client-10.web.app/
